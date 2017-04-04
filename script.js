@@ -1,4 +1,4 @@
-var footer = document.getElementById("foot01")
+var footer = document.getElementById("foot01");
 
 if (footer !== null){
 
@@ -24,34 +24,34 @@ var images = {
 	    base: "tahoe/",
 	    pics: ["tahoe_cove.JPG"]
 	}
-}
+};
 
-var yosemiteImgIndex = 0
+var yosemiteImgIndex = 0;
 
 function destination(location){
-	return document.getElementById(location)
+	return document.getElementById(location);
 }
 
 function baseImageUrl(destination){
-	return images.base + images[destination].base
+	return images.base + images[destination].base;
 }
 
 function imgSetter(location, imgIndex){
-    domElement = destination(location)
-    domElement.src = baseImageUrl(location) + images[location].pics[imgIndex]
+    domElement = destination(location);
+    domElement.src = baseImageUrl(location) + images[location].pics[imgIndex];
 }
 
 function imgChanger(){ 
-	yosemiteImgIndex++
-	if (yosemiteImgIndex % images.yosemite.pics.length == 0){
-		yosemiteImgIndex = 0
+	yosemiteImgIndex++;
+	if (yosemiteImgIndex % images.yosemite.pics.length === 0){
+		yosemiteImgIndex = 0;
 	}
-	imgSetter('yosemite', yosemiteImgIndex)
+	imgSetter('yosemite', yosemiteImgIndex);
 }
 
-imgSetter('yosemite', yosemiteImgIndex)
+imgSetter('yosemite', yosemiteImgIndex);
 
-document.getElementById("yosemite").addEventListener('click', imgChanger)
+document.getElementById("yosemite").addEventListener('click', imgChanger);
 document.getElementById("yosemiteBlog").onclick = function () {
         location.href = "yosemite.html";
-    }
+    };
